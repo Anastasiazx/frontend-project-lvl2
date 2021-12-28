@@ -1,0 +1,29 @@
+{
+  "name": "@hexlet/code",
+  "type": "module",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/Anastasiazx/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/Anastasiazx/frontend-project-lvl2/actions)",
+  "main": "index.js",
+  "scripts": {
+    "test": "hexlet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anastasiazx/frontend-project-lvl2.git"
+  },
+  "keywords": [
+    "project2"
+  ],
+  "author": "Anastasiia Piatiletova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anastasiazx/frontend-project-lvl2/issues"
+  },
+  "homepage": "https://github.com/Anastasiazx/frontend-project-lvl2#readme",
+  "dependencies": {
+    "commander": "^8.3.0"
+  }
+}
