@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Anastasiazx/frontend-project-lvl2#readme",
   "dependencies": {
-    "commander": "^8.3.0"
+    "commander": "^8.3.0",
+    "lodash": "^4.17.21"
   }
 }
