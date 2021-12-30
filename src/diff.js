@@ -1,8 +1,8 @@
 import { readFileSync } from 'fs';
 import _ from 'lodash';
 
-const data1 = readFileSync('./files/file1.json')
-const data2 = readFileSync('./files/file2.json')
+const data1 = readFileSync('./files/file1.json');
+const data2 = readFileSync('./files/file2.json');
 
 const genDiff = (object1, object2) => {
   const result = [];
@@ -18,12 +18,12 @@ const genDiff = (object1, object2) => {
     } else if (!_.has(file2, key)) {
       result.push(`  - ${key}: ${file1[key]}`);
     } else if (file1[key] !== file2[key]) {
-      result.push(`  - ${key}: ${file1[key]}\n  + ${key}: ${file2[key]}`)
+      result.push(`  - ${key}: ${file1[key]}\n  + ${key}: ${file2[key]}`);
     } else {
       result.push(`    ${key}: ${file1[key]}`);
-    }  
-}
-return `{\n${result.join('\n')} \n}`;
+    }
+  }
+  return `{\n${result.join('\n')} \n}`;
 };
 
 export default genDiff;
