@@ -1,9 +1,12 @@
 import { readFileSync } from 'fs';
 import _ from 'lodash';
+import path from 'path';
 
 const genDiff = (object1, object2) => {
-  const file1 = JSON.parse(readFileSync(`./files/${object1}`));
-  const file2 = JSON.parse(readFileSync(`./files/${object2}`));
+  const data1 = readFileSync(path.resolve('./files', `${object1}`));
+  const data2 = readFileSync(path.resolve('./files', `${object2}`));
+  const file1 = JSON.parse(data1);
+  const file2 = JSON.parse(data2);
   const keysObject1 = Object.keys(file1);
   const keysObject2 = Object.keys(file2);
   const keysObjects = _.union(keysObject1, keysObject2).sort();
