@@ -6,9 +6,9 @@
   },
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Anastasiazx/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/Anastasiazx/frontend-project-lvl2/actions)",
-  "main": "diff.js",
+  "main": "src/diff.js",
   "scripts": {
-    "test": "npx jest"
+    "test": "npx jest --bail"
   },
   "repository": {
     "type": "git",
