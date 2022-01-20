@@ -1,17 +1,10 @@
-import fs from 'fs';
-import path, { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import readFile from '../src/read_file.js';
 import genDiff from '../src/diff.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const getFixturePath = (filename) => path.join(__dirname, '__fixtures__', filename);
-const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
-
 test('genDiff JSON', () => {
-  expect(genDiff('file1.json', 'file2.json')).toEqual(readFile('expected_json.txt'));
+  expect(genDiff('filepath1.json', 'filepath2.json')).toEqual(readFile('expected_filepath_json.txt'));
 });
 
 test('genDiff YML', () => {
-  expect(genDiff('file1.yml', 'file2.yml')).toEqual(readFile('expected_json.txt'));
+  expect(genDiff('filepath1.yaml', 'filepath2.yaml')).toEqual(readFile('expected_filepath_json.txt'));
 });
