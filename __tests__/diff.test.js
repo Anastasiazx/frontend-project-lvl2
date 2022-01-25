@@ -1,5 +1,5 @@
 import readFile from '../src/read_file.js';
-import genDiff from '../src/diff.js';
+import genDiff from '../src/index.js';
 
 test('genDiff JSON', () => {
   expect(genDiff('filepath1.json', 'filepath2.json')).toEqual(readFile('expected_filepath_json.txt'));
