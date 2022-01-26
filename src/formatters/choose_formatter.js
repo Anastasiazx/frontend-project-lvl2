@@ -9,6 +9,9 @@ const chooseFormatters = (resultingTree, format) => {
     case 'plain':
       return plain(resultingTree);
 
+    case 'json':
+      return JSON.stringify(resultingTree);
+
     default:
       throw new Error(`TypeError: ${format}`);
   }

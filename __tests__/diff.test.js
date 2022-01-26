@@ -16,3 +16,7 @@ test('genDiff JSON, format = plain', () => {
 test('genDiff YML, format = plain', () => {
   expect(genDiff('filepath1.yaml', 'filepath2.yaml', 'plain')).toEqual(readFile('expected_filepath_plain.txt'));
 });
+
+test('genDiff JSON, format = json', () => {
+  expect(genDiff('filepath1.json', 'filepath2.json', 'json')).toEqual(readFile('expected_filepath_json.txt'));
+});
