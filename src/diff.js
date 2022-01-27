@@ -9,7 +9,8 @@ const diff = (file1, file2) => {
     const keysObject1 = Object.keys(filepath1);
     const keysObject2 = Object.keys(filepath2);
 
-    const keysObjects = _.union(keysObject1, keysObject2).sort();
+    const keysObj = _.union(keysObject1, keysObject2);
+    const keysObjects = _.sortBy(keysObj);
     return keysObjects.map((key) => {
       const value1 = filepath1[key];
       const value2 = filepath2[key];
