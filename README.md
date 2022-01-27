@@ -22,7 +22,7 @@ Getting Started
 
 Commands:
  - gendiff -h (utility information)
- - gendiff --format [choose formatter] [file1 name] [file2 name] (compare files, 'stylish' - default formatter)
+ - gendiff [options] [file1 name] [file2 name] (compare files, 'stylish' - default format)
 
 
 ### Hexlet tests and linter status:
