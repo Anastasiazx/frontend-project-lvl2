@@ -1,12 +1,8 @@
 import fs from 'fs';
-import path, { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import path from 'path';
 import yaml from 'js-yaml';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const getFixturePath = (filename) => path.join(__dirname, '..', '__tests__/__fixtures__', filename);
-const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
+const readFilepath = (file) => fs.readFileSync(path.resolve(process.cwd(), './__tests__/__fixtures__', file), 'utf-8');
 
 const chooseParsers = {
   json: JSON.parse,
@@ -20,7 +16,7 @@ const parsedFile = (file, fileFormat) => {
 };
 
 const getParsedData = (file) => {
-  const data = readFile(file);
+  const data = readFilepath(file);
   const dataType = path.extname(file).substring(1);
   return parsedFile(data, dataType);
 };
