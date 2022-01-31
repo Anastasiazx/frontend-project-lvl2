@@ -28,7 +28,7 @@ const stylish = (resultingTree) => {
       case 'deleted':
         return getStylish(val.currentValue, '-');
 
-      case 'recursion':
+      case 'nested':
         return `${indentSize(depth)}  ${val.key}: {\n${style(val.children, depth + 1).join('')}${indentSize(depth)}  }\n`;
 
       case 'changed':
