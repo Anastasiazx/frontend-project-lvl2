@@ -4,7 +4,7 @@ import calcDiff from './diff.js';
 import chooseFormatters from './formatters/index.js';
 import parse from './parsers.js';
 
-const readFilepath = (file) => fs.readFileSync(path.resolve(process.cwd(), './__tests__/__fixtures__', file), 'utf-8');
+const readFilepath = (filename) => fs.readFileSync(path.resolve(process.cwd(), filename), 'utf-8');
 
 const getParsedData = (file) => {
   const data = readFilepath(file);
